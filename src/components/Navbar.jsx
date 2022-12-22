@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import '../App.css'
 
@@ -16,7 +16,7 @@ const Navbar = ({ searchValue, setSearchValue }) => {
 
   return (
     <header className="header">
-      <a className="header__title" href='/'>MyAnimeList</a>
+      <Link className="header__title" to='/Anime-App/'>MyAnimeList</Link>
       <form className="header__form" onSubmit={handleSubmit}>
         <input className="header__search" type="search" placeholder='Search your anime' onChange={(e) => {setSearchValue(e.target.value)}}/>
       </form>
